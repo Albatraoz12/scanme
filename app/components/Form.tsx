@@ -16,6 +16,11 @@ const Form = () => {
           <label htmlFor='test-3'>Test 3</label>
           <input type='text' id='test-3' />
         </div>
+        <div>
+          <button className='btn bg-green-600 hover:bg-green-900'>
+            Submit
+          </button>
+        </div>
       </form>
     </section>
   );
