@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import Form from './components/Form';
+// react-webcam and tesseract.js npm that is going to use
 
 export default function Home() {
   return (
