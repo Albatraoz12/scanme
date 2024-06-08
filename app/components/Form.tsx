@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import convertor from '../lib/converter';
 
 const Form = () => {
   return (
@@ -19,6 +21,15 @@ const Form = () => {
         <div>
           <button className='btn bg-green-600 hover:bg-green-900'>
             Submit
+          </button>
+        </div>
+        <div>
+          <button
+            className='btn bg-green-600 hover:bg-green-900'
+            onClick={() => convertor()}
+            type='button'
+          >
+            test
           </button>
         </div>
       </form>
