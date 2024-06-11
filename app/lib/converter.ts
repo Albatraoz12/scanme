@@ -2,15 +2,13 @@ import { createWorker } from 'tesseract.js';
 
 const convertor = async (img?: string) => {
   const worker = await createWorker('eng');
-  const ret = await worker.recognize('./Card2.png');
-  console.log(ret);
-  console.log(ret.data.text);
-  const text = ret.data.text;
-  let regex = /[^\w\s]/gi;
-  let cleanedText = text.replace(regex, '');
-  console.log(cleanedText);
+  const {
+    data: { text },
+  } = await worker.recognize('./Card2.png');
+  const cleanedText = text.replace(/[^\w\s]/gi, '');
+  const itemsArr = cleanedText.split('\n').map((item) => item.trim());
   await worker.terminate();
-  return text;
+  return itemsArr;
 };
 
 export default convertor;
