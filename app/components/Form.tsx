@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import convertor from '../lib/converter';
 import { IFormData } from '../Interfaces/IFormData';
 
-const Junk = () => {
+const Form = () => {
   const [formData, setFormData] = useState<IFormData>({
     itemName: '',
     articleNum: '',
@@ -86,4 +86,4 @@ const Junk = () => {
   );
 };
 
-export default Junk;
+export default Form;
